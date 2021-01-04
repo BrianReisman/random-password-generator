@@ -1,14 +1,14 @@
 const h3 = document.querySelector('h3');
 const button = document.querySelector('button');
-const input = document.querySelector('input');
-const p = document.querySelector('p');
+// const input = document.querySelector('input');
+// const p = document.querySelector('p');
 // alert('hi'); //easiest was to check you are connected like red background in css
 
 //eventlistener for button click
 button.addEventListener('click', () => {
-  input.value = GeneratePassword(16);
-  console.log(input.value);
-  h3.innerText = 'Click here to copy password ' + input.value //innerText more secrue than innerHTML
+  // input.value = GeneratePassword(16);
+  const value = GeneratePassword(16);
+  h3.innerText = 'Click here to copy password ' + value //innerText more secrue than innerHTML
   h3.classList.remove('hide')
   h3.classList.add('show')
 })
@@ -35,5 +35,5 @@ const copyText = () => {
 
   let passText = input.value;
   navigator.clipboard.writeText(passText);
-  alert(passText);
+  alert(`Your new password:  ${passText}  has been copied.`);
 }
