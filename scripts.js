@@ -9,6 +9,8 @@ button.addEventListener('click', () => {
   input.value = GeneratePassword(16);
   console.log(input.value);
   h3.innerText = 'Click here to copy password ' + input.value //innerText more secrue than innerHTML
+  h3.classList.remove('hide')
+  h3.classList.add('show')
 })
 
 //password generator
